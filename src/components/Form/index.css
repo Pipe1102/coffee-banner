@@ -1,0 +1,51 @@
+.form {
+  border-style: solid;
+  border-color: rgba(206, 206, 206, 1);
+  border-radius: 10px 10px 0px 0px;
+  max-width: 834px;
+}
+.heading {
+  background-color: rgba(66, 66, 67, 1);
+  display: flex;
+  align-content: center;
+  border-radius: 10px 10px 0px 0px;
+}
+.headerTxt {
+  color: whitesmoke;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+.step1-container {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.coffeeSelect {
+  margin-right: 10px;
+  min-height: 45px;
+  border-color: rgba(206, 206, 206, 1);
+  border-radius: 5px;
+  color: rgba(66, 66, 67, 1);
+  cursor: pointer;
+}
+
+.nextStepBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(17, 160, 219, 1);
+  color: rgba(255, 255, 255, 1);
+  max-height: 47px;
+  min-width: 156px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.actionArea {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
