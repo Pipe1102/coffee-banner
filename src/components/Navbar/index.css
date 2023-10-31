@@ -1,0 +1,23 @@
+.navbar {
+  margin-top: 10px;
+  position: sticky;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+  background-color: rgba(66, 66, 67, 1);
+  display: flex;
+  border-radius: 10px 10px 0px 0px;
+  min-height: 34px;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+}
+.navTitle {
+  color: whitesmoke;
+  font-size: 28px;
+  line-height: 34px;
+}
