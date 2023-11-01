@@ -41,10 +41,32 @@ const Form = () => {
       {activeStep !== 3 && (
         <div className="actionArea">
           <button
-            className="nextStepBtn"
+            className="actionButtons"
             onClick={() => setActiveStep((prev) => prev + 1)}
           >
             <p style={{ fontWeight: "600", fontSize: "18px" }}>Next step</p>
+          </button>
+        </div>
+      )}
+      {activeStep === 3 && (
+        <div className="finishArea">
+          <button className="startOverBtn">
+            <p style={{ fontWeight: "bold", fontSize: "18px" }}>Start over</p>
+            <i
+              className="fa fa-undo"
+              aria-hidden="true"
+              style={{ fontSize: "18px" }}
+            ></i>
+          </button>
+          <button className="actionButtons">
+            <i
+              className="fa fa-code"
+              aria-hidden="true"
+              style={{ fontSize: "18px" }}
+            ></i>
+            <p style={{ fontWeight: "600", fontSize: "18px" }}>
+              View and copy code
+            </p>
           </button>
         </div>
       )}

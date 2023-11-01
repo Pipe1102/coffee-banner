@@ -16,6 +16,7 @@
   font-weight: 600;
   padding-left: 40px;
 }
+
 .step1-container {
   padding-top: 20px;
   padding-left: 10px;
@@ -32,7 +33,7 @@
   cursor: pointer;
 }
 
-.nextStepBtn {
+.actionButtons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +44,82 @@
   border-radius: 10px;
   border-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  gap: 5px;
 }
 .actionArea {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 10px;
+}
+.finishArea {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.startOverBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.card-area {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+.card1 {
+  background-color: rgba(243, 243, 243, 1);
+  min-height: 180px;
+  min-width: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card2 {
+  background-color: rgba(243, 243, 243, 1);
+  min-height: 180px;
+  min-width: 218px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card3 {
+  background-color: rgba(243, 243, 243, 1);
+  min-height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.customArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40px;
+  gap: 40px;
+}
+
+.step3-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step3-container {
+  padding: 20px;
+}
+
+.input {
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  border-color: rgba(206, 206, 206, 1);
+  resize: none;
 }

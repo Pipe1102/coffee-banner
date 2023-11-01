@@ -5,9 +5,11 @@ interface Props {
 }
 
 const Step1 = ({ activeStep }: Props) => {
-  const [coffeeList, setCoffeeList] = useState<Coffee[] | []>([]);
+  const [coffeeList, setCoffeeList] = useState<Coffee[]>([]);
   const [selectedRadio, setSelectedRadio] = useState<string>("hot");
   const [selectedCoffe, setSelectedCoffee] = useState<Coffee>(coffeeList[0]);
+
+  const handleNextStep = () => {};
 
   function getIcedCoffee(): void {
     fetch("https://api.sampleapis.com/coffee/iced")
