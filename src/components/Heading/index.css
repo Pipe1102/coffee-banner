@@ -1,5 +1,5 @@
-.titleArea {
+.headerArea {
   display: flex;
   flex-direction: column;
-  justify-content: flex-startp;
+  justify-content: flex-start;
 }

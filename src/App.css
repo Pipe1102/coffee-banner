@@ -1,3 +1,9 @@
 .app {
   margin: 0px 200px 0px 200px;
 }
+.content {
+  display: flex;
+  /* Maybe better solution*/
+  align-items: flex-start;
+  justify-content: flex-start;
+}

@@ -1,35 +1,37 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { useGlobalCoffee } from "../../context";
 
 interface Props {
   activeStep: number;
 }
 
 const Step1 = ({ activeStep }: Props) => {
+  const { setCoffee } = useGlobalCoffee();
   const [coffeeList, setCoffeeList] = useState<Coffee[]>([]);
   const [selectedRadio, setSelectedRadio] = useState<string>("hot");
-  const [selectedCoffe, setSelectedCoffee] = useState<Coffee>(coffeeList[0]);
-
-  const handleNextStep = () => {};
 
   function getIcedCoffee(): void {
     fetch("https://api.sampleapis.com/coffee/iced")
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: Coffee[]) => {
         setCoffeeList(data);
-        setSelectedCoffee(data[0]);
+        setCoffee(data[0]);
       });
   }
   function getHotCoffee(): void {
     fetch("https://api.sampleapis.com/coffee/hot")
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: Coffee[]) => {
         setCoffeeList(data);
-        setSelectedCoffee(data[0]);
+        setCoffee(data[0]);
       });
   }
   useEffect(() => {
-    getHotCoffee();
-  }, []);
+    if (activeStep === 1) {
+      getHotCoffee();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeStep]);
 
   const handleCoffeeRadioChange = (
     event: ChangeEvent<HTMLInputElement>
@@ -49,7 +51,7 @@ const Step1 = ({ activeStep }: Props) => {
     const selected = coffeeList.filter(
       (el: Coffee) => el.title === event.target.value
     );
-    setSelectedCoffee(selected[0]);
+    setCoffee(selected[0]);
   };
 
   return (

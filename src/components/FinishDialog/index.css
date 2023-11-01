@@ -1,0 +1,47 @@
+.dialog {
+  display: flex;
+  flex-direction: column;
+  min-width: 950px;
+}
+.closeArea {
+  display: flex;
+  justify-content: flex-end;
+}
+.close {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: rgba(105, 105, 105, 1);
+  cursor: pointer;
+}
+
+.titleArea {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.codeInput {
+  width: 100%;
+  border-color: rgba(212, 212, 212, 1);
+}
+.copy {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyBtn {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(17, 160, 219, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
